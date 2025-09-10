@@ -11,7 +11,10 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write ."
-  },"engines": { "node": ">=18 <23" },
+  },
+  "engines": {
+    "node": ">=18 <23"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -33,6 +36,7 @@
     "@aws-sdk/client-s3": "^3.864.0",
     "@aws-sdk/client-ses": "^3.864.0",
     "@aws-sdk/lib-storage": "^3.864.0",
+    "@faker-js/faker": "^10.0.0",
     "@types/jsonwebtoken": "^9.0.10",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",

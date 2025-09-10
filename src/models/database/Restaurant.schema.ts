@@ -23,7 +23,7 @@ export interface RestaurantI {
   phone_number: string
   rating: number
   total_reviews: number
-  weekly_opening_hours: WeeklyOpeningHours[]
+  weekly_opening_hours?: WeeklyOpeningHours[]
   special_opening_days?: SpecialOpeningDay[]
   website?: string | null
   media?: Media[]
@@ -39,7 +39,7 @@ export default class Restaurant {
   phone_number: string
   rating: number
   total_reviews: number
-  weekly_opening_hours: WeeklyOpeningHours[]
+  weekly_opening_hours?: WeeklyOpeningHours[]
   special_opening_days?: SpecialOpeningDay[]
   media: Media[]
   website: string | null
