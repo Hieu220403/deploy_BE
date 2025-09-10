@@ -231,8 +231,12 @@ class ReviewServices {
     const restaurant = await databaseServices.restaurants.findOne({ _id: new ObjectId(restaurant_id) })
 
     if (restaurant) {
-      const newTotal = restaurant.total_reviews + 1
-      const newAvgRating = (restaurant.rating || 0 * restaurant.total_reviews + rating) / newTotal
+      const prevAvg = restaurant.rating ?? 0
+      const prevTotal = restaurant.total_reviews ?? 0
+      const newTotal = prevTotal + 1
+      const newAvgRating = (prevAvg * prevTotal + Number(rating)) / newTotal
+      // const newTotal = restaurant.total_reviews + 1
+      // const newAvgRating = (restaurant.rating || 0 * restaurant.total_reviews + rating) / newTotal
       await databaseServices.restaurants.updateOne(
         { _id: new ObjectId(restaurant_id) },
         {
