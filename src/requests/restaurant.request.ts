@@ -20,7 +20,7 @@ export interface CreateRestaurantRequest {
   description: string
   address: string
   phone_number: string
-  weekly_opening_hours: WeeklyOpeningHours[]
+  weekly_opening_hours?: WeeklyOpeningHours[]
   special_opening_days?: SpecialOpeningDay[]
   website?: string | null
   media?: Media[]
