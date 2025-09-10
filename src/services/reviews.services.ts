@@ -97,7 +97,7 @@ class ReviewServices {
                   rating: {
                     $gte: +rating,
                     $lt: rating !== 5 ? +rating + 1 : 5
-                  }
+                  } //s
                 }
               : {})
           }
