@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
-import route from './routes'
-import databaseServices from './services/database.services' 
-import errorMiddleware from './middlewares/error.middlewares'
+import route from '~/routes'
+import databaseServices from '~/services/database.services'
+import errorMiddleware from '~/middlewares/error.middlewares'
 dotenv.config()
 const app = express()
 app.use(
@@ -18,6 +18,6 @@ route(app)
 databaseServices.connect()
 app.use(errorMiddleware)
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running on http://0.0.0.0:${port}`)
+  })
