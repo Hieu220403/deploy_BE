@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
-import route from './src/routes'
-import databaseServices from './src/services/database.services' 
-import errorMiddleware from './src/middlewares/error.middlewares'
+import route from './routes'
+import databaseServices from './services/database.services' 
+import errorMiddleware from './middlewares/error.middlewares'
 dotenv.config()
 const app = express()
 app.use(
